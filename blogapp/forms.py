@@ -25,4 +25,4 @@ class userloginform(forms.ModelForm):
 class bloggingform(forms.ModelForm):
     class Meta:
         model = blog
-        fields = ('title','content')
+        fields = ('title','content','author')

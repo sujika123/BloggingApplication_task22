@@ -13,6 +13,7 @@
     <div class="card w-75 mb-3">
         <div class="card-body">
             <h2>{{i.title}}</h2>
+             <p>by {{i.author}}</p>
             <p>{{i.pubdate}}</p>
             <p class="card-text">{{i.content}}</p>
             <a href="{% url 'update_blog' i.id %}"><button class="btn btn-primary" type="submit">Update</button></a>
