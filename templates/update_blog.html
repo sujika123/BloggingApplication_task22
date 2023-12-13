@@ -1,0 +1,23 @@
+{% extends 'userhome.html' %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
+{% block content %}
+
+<div class="card">
+
+    <br> <H3 class="text-center" style="color:black;">UPDATE BLOG</H3>
+    <br><br>
+    <div class="task_list_main">
+
+        <form method="post" enctype="multipart/form-data" style="color:black;margin-left:80px;">
+                {% csrf_token %}
+                {{form|crispy}}
+    <div style="margin-left:610px;">
+        <button class="btn btn-primary" type = "submit">Submit</button>
+    </div>
+
+    </form>
+</div>
+</div>
+
+{% endblock %}

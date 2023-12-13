@@ -1,0 +1,26 @@
+{% extends 'userhome.html' %}
+{% block content %}
+
+
+<div style="color:black;">
+
+    <center>
+        <h2>VIEW BLOG</h2>
+    </center>
+    <br><br>
+
+    {% for i in data %}
+    <div class="card w-75 mb-3">
+        <div class="card-body">
+            <h2>{{i.title}}</h2>
+            <p>{{i.pubdate}}</p>
+            <p class="card-text">{{i.content}}</p>
+            <a href="{% url 'update_blog' i.id %}"><button class="btn btn-primary" type="submit">Update</button></a>
+            <a href="{% url 'delete_blog' i.id %}"><button class="btn btn-danger" type="submit">Delete</button></a>
+        </div>
+    </div>
+   {% endfor %}
+
+</div>
+
+{% endblock %}
