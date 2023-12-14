@@ -12,8 +12,10 @@
         <form method="post" enctype="multipart/form-data" style="color:black;margin-left:80px;">
                 {% csrf_token %}
                 {{form|crispy}}
-    <div style="margin-left:610px;">
+    <div>
+        <center>
         <button class="btn btn-primary" type = "submit">Submit</button>
+        </center>
     </div>
 
     </form>
